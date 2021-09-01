@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.4.3)
+  - IQKeyboardManager (6.5.6)
+  - JGProgressHUD (2.2)
   - "NSObject+Rx (5.2.2)":
     - RxSwift (~> 6.2)
   - ObjectMapper (4.2.0)
@@ -14,42 +16,59 @@ PODS:
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageSVGCoder (1.6.0):
+    - SDWebImage/Core (~> 5.6)
   - SwiftLint (0.43.1)
   - Then (2.7.0)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManager
+  - JGProgressHUD
   - "NSObject+Rx"
   - ObjectMapper
   - RxAlamofire
   - RxCocoa
   - RxSwift
+  - SDWebImage
+  - SDWebImageSVGCoder
   - SwiftLint
   - Then
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IQKeyboardManager
+    - JGProgressHUD
     - "NSObject+Rx"
     - ObjectMapper
     - RxAlamofire
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SDWebImage
+    - SDWebImageSVGCoder
     - SwiftLint
     - Then
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageSVGCoder: 020cc0f1ab0ef8ca63a9365c03421d67aa3d4a46
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: d75ab3266c7fa2851071020ce97f71772a462270
+PODFILE CHECKSUM: f6e4c26c6b351fe1017e4166e154b68ad823bb96
 
 COCOAPODS: 1.10.2

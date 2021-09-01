@@ -14,6 +14,12 @@ target 'MVVM-C' do
   pod 'ObjectMapper'
   pod 'SwiftLint'
 
+  #App
+  pod 'IQKeyboardManager'
+  pod 'JGProgressHUD'
+  pod 'SDWebImage'
+  pod 'SDWebImageSVGCoder'
+
   # Pods for MVVM-C
 
   target 'MVVM-CTests' do
