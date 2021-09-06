@@ -1,14 +1,14 @@
 //
-//  MovieCoordinator.swift
+//  SearchCoordinatior.swift
 //  MVVM-C
 //
-//  Created by Viet Anh on 01/09/2021.
+//  Created by Viet Anh on 06/09/2021.
 //
 
 import Foundation
 import UIKit
 
-class MovieCoordinator: MoviesCoordinatorLogic {
+class SearchCoordinator: SearchCoordinatorLogic {
  
 
     private let window: UIWindow?
@@ -21,11 +21,11 @@ class MovieCoordinator: MoviesCoordinatorLogic {
     
   
     func start() {
-        let movieVC = MovieListVC.loadFromStoryboard()
-        movieVC.coordinator = self
-
-        movieVC.viewModel = MovieViewModel(useCase: MoviesUseCase(repository: MoviesRepository()))
-        let rootNavigation = UINavigationController(rootViewController: movieVC)
+        let searchVC = SearchVC.loadFromStoryboard()
+        searchVC.coordinator = self
+        searchVC.viewModel = SearchMovieViewModel(useCase: SearchUseCase(repository: MoviesRepository()))
+     
+        let rootNavigation = UINavigationController(rootViewController: searchVC)
         window?.rootViewController = rootNavigation
         navigationController = rootNavigation
     }

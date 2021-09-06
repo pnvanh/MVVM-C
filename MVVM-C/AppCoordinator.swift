@@ -23,6 +23,9 @@ class AppCoordinator {
         let movieCoordinator = MovieCoordinator(window: self.window)
         movieCoordinator.start()
         window.makeKeyAndVisible()
+//        let searchCoordinator = SearchCoordinator(window: self.window)
+//        searchCoordinator.start()
+//        window.makeKeyAndVisible()
     }
     
     func finish() {

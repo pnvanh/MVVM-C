@@ -23,8 +23,8 @@ struct MovieViewModel: ViewModel {
     }
     
     func transform(_ input: Input) -> Output {
-        let input = useCase.fetchingListMovie(pageNumber)
-        return Output(movie: input.asDriver(onErrorJustReturn: []))
+        let movie = useCase.fetchingListMovie(pageNumber).asDriver(onErrorJustReturn: [])
+        return Output(movie: movie)
     }
     
 }

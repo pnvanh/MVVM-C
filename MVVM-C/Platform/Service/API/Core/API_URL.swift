@@ -21,6 +21,7 @@ class APIURL {
     
     // App
     static let discover = urlRoot + "/discover/movie"
-    static let teamDetails = urlRoot + "/teams/%d"
+    static let search = urlRoot + "/search/movie"
+//    static let teamDetails = urlRoot + "/teams/%d"
 }
 

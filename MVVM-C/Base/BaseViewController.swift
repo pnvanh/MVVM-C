@@ -1,8 +1,8 @@
 //
-//  BaseViewController.swift
+//  BaseTabBarController.swift
 //  MVVM-C
 //
-//  Created by Viet Anh on 01/09/2021.
+//  Created by Viet Anh on 06/09/2021.
 //
 
 import UIKit
@@ -44,4 +44,3 @@ extension UIViewController {
         return controller
     }
 }
-

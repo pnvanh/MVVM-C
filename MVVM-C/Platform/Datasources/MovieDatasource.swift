@@ -20,4 +20,14 @@ class MovieDatasource: Datasource {
         }
     }
     
+    func searchMovie(_ searchText: String) -> Observable<[MovieModel]> {
+        let input =  SearchMoviesInput(searchText)
+        return APIService.shared.searchMovie(input).map {  output -> [MovieModel] in
+            if let movie = output.movies {
+               return movie
+           }
+           throw APIResponseError.invalidResponseData
+        }
+    }
+    
 }

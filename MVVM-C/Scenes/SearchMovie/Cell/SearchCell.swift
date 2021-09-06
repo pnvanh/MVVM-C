@@ -1,15 +1,16 @@
 //
-//  MovieCell.swift
+//  SearchCell.swift
 //  MVVM-C
 //
-//  Created by Viet Anh on 01/09/2021.
+//  Created by Viet Anh on 06/09/2021.
 //
 
 import UIKit
 import RxCocoa
+import RxSwift
 import SDWebImageSVGCoder
 
-class MovieCell: BaseTableViewCell {
+class SearchCell: BaseTableViewCell {
 
     @IBOutlet weak var movieRating: UILabel!
     @IBOutlet weak var movieReleaseDay: UILabel!
@@ -18,19 +19,17 @@ class MovieCell: BaseTableViewCell {
     @IBOutlet weak var cardView: UIView!
     
     let formatter = NumberFormatter()
+    
     var movie: Driver<MovieModel> = Driver.empty()
-    
-  
-    
+
+   
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     override func makeLocalizedTexts() {
-        
+       
     }
-    
-    
     
     override func bind() {
         movie
@@ -40,17 +39,17 @@ class MovieCell: BaseTableViewCell {
                     self?.movieImage.sd_setImage(with: url, completed: nil)
                 }
             }.disposed(by: disposeBag)
-        
+
         movie
             .map { $0.title }
             .drive( movieTitle.rx.text)
             .disposed(by: disposeBag)
-        
+
         movie
             .map { $0.releaseDate }
             .drive( movieReleaseDay.rx.text)
             .disposed(by: disposeBag)
-        
+
         movie
             .map { $0.voteAverage.string }
             .drive( movieRating.rx.text)

@@ -7,6 +7,7 @@ target 'MVVM-C' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
   pod 'NSObject+Rx'
   pod 'Then'
   pod 'RxAlamofire'

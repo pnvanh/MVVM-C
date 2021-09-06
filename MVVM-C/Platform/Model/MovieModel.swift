@@ -21,6 +21,7 @@ struct MovieModel {
     var video: Bool
     var voteAverage: Double
     var voteCount: Int
+
 }
 
 extension MovieModel: Mappable {
