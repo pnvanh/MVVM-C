@@ -41,7 +41,8 @@ class SearchVC: BaseViewController{
             .throttle(.microseconds(200), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .flatMapLatest { query -> Driver<[MovieModel]> in
-                let input = SearchMovieViewModel.Input(search: Driver.just("\(query)") )
+                let input = SearchMovieViewModel
+                    .Input(search: Driver.just(query.replacingOccurrences(of: " ", with: "%20")) )
                 return self.viewModel.transform(input).movie
             }
             .asDriver(onErrorJustReturn: [] )
