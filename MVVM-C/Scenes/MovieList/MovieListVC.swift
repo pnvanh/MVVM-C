@@ -19,25 +19,12 @@ class MovieListVC: BaseViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Movie"
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setupNavigationBar()
     }
     override func configure() {
         movieTableView.registerNib(cellName: MovieCell.className)
         movieTableView.tableFooterView = UIView()
-    }
-
-    override func makeLocalizedTexts() {
-        
-    }
-    
-    func setupNavigationBar(){
-        self.title = "Movie"
     }
     
     override func bind() {
