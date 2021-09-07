@@ -21,6 +21,7 @@ class SearchVC: BaseViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     override func configure() {
         tableView.registerNib(cellName: SearchCell.className)
         tableView.tableFooterView = UIView()

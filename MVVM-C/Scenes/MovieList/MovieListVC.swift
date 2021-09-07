@@ -53,9 +53,8 @@ class MovieListVC: BaseViewController, UIScrollViewDelegate {
             }.asDriver(onErrorJustReturn: [] )
         
         output?
-            .drive(movieTableView.rx.items(cellIdentifier: MovieCell.className,
-                                         cellType: MovieCell.self)) {
-              (_ , movie , cell) in
+            .drive(movieTableView.rx.items(cellIdentifier: MovieCell.className, cellType: MovieCell.self))
+            { (_ , movie , cell) in
                 cell.movie = Driver.just(movie)
                 cell.bind()
             }
@@ -75,7 +74,7 @@ class MovieListVC: BaseViewController, UIScrollViewDelegate {
 
             if offSetY == (contentHeight - self.movieTableView.frame.size.height) {
                print("Load More")
-                
+                //not yet
             }
         }.disposed(by: disposeBag)
     }
