@@ -23,10 +23,8 @@ class MovieDetailVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
     }
-    
+  
     override func configure() {
         movieImage.sd_setImage(with: URL(string: ImagePath.Path + "\(movie?.posterPath ?? "")"), completed: nil)
         movieTitle.text = movie?.title

@@ -10,24 +10,19 @@ import UIKit
 
 class MovieCoordinator: MoviesCoordinatorLogic {
  
-
-    private let window: UIWindow?
-
-    init(window: UIWindow?) {
-        self.window = window
-    }
-    
     weak var navigationController: UINavigationController?
     
-  
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
     func start() {
         let movieVC = MovieListVC.loadFromStoryboard()
         movieVC.coordinator = self
 
         movieVC.viewModel = MovieViewModel(useCase: MoviesUseCase(repository: MoviesRepository()))
-        let rootNavigation = UINavigationController(rootViewController: movieVC)
-        window?.rootViewController = rootNavigation
-        navigationController = rootNavigation
+        
+        navigationController?.pushViewController(movieVC, animated: true)
     }
     
     func finish() {

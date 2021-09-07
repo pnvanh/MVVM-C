@@ -8,6 +8,8 @@
 import UIKit
 
 class TabBarCoordinator: Coordinator {
+    
+    
     var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
@@ -15,11 +17,28 @@ class TabBarCoordinator: Coordinator {
     }
     
     func start() {
-        <#code#>
+        let tabBarController = TabBarController()
+        tabBarController.coordinator = self
+        
+        
+        let movieNavigationController = UINavigationController()
+        movieNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
+        let movieCoordinator = MovieCoordinator(navigationController: movieNavigationController)
+        movieCoordinator.start()
+        
+        let searchNavigationController = UINavigationController()
+        searchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        let searchCoordinator = SearchCoordinator(navigationController: searchNavigationController)
+        searchCoordinator.start()
+        
+        tabBarController.viewControllers = [movieNavigationController,
+                                            searchNavigationController]
+        tabBarController.modalPresentationStyle = .fullScreen
+        navigationController?.present(tabBarController, animated: false, completion: nil)
     }
     
     func finish() {
-        <#code#>
+        
     }
     
     

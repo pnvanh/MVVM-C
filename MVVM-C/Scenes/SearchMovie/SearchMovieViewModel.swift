@@ -12,7 +12,6 @@ import RxCocoa
 struct SearchMovieViewModel: ViewModel {
     
     var useCase: SearchUseCaseLogic!
-    var searchText = ""
     
     struct Input {
         let search: Driver<String>

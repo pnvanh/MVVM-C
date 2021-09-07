@@ -16,16 +16,14 @@ class AppCoordinator {
     }
     
     func start() {
-        guard let window = window else {
-            return
-        }
+
+        let navigationController = UINavigationController()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         
-        let movieCoordinator = MovieCoordinator(window: self.window)
-        movieCoordinator.start()
-        window.makeKeyAndVisible()
-//        let searchCoordinator = SearchCoordinator(window: self.window)
-//        searchCoordinator.start()
-//        window.makeKeyAndVisible()
+        let startCoordinator = TabBarCoordinator(navigationController: navigationController)
+        startCoordinator.start()
+        
     }
     
     func finish() {

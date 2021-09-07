@@ -9,25 +9,19 @@ import Foundation
 import UIKit
 
 class SearchCoordinator: SearchCoordinatorLogic {
- 
-
-    private let window: UIWindow?
-
-    init(window: UIWindow?) {
-        self.window = window
-    }
     
     weak var navigationController: UINavigationController?
-    
+ 
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
   
     func start() {
         let searchVC = SearchVC.loadFromStoryboard()
         searchVC.coordinator = self
         searchVC.viewModel = SearchMovieViewModel(useCase: SearchUseCase(repository: MoviesRepository()))
-     
-        let rootNavigation = UINavigationController(rootViewController: searchVC)
-        window?.rootViewController = rootNavigation
-        navigationController = rootNavigation
+        
+        navigationController?.pushViewController(searchVC, animated: true)
     }
     
     func finish() {

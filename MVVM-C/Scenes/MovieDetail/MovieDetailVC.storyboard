@@ -13,7 +13,7 @@
         <!--Movie DetailVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="MovieDetailVC" id="Y6W-OH-hqX" customClass="MovieDetailVC" customModule="MVVM_C" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailVC" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="MovieDetailVC" customModule="MVVM_C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,14 +24,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOZ-Ex-gkW">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SOY-aP-T7q">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SOY-aP-T7q">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="450" id="vR3-2E-iR1"/>
+                                                    <constraint firstAttribute="height" constant="550" id="vR3-2E-iR1"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-Pv-xra">
-                                                <rect key="frame" x="30" y="400" width="354" height="200"/>
+                                                <rect key="frame" x="30" y="500" width="354" height="200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="auj-Z3-fKj">
                                                         <rect key="frame" x="10" y="10" width="334" height="180"/>
